@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C & T Group of Partners - Digital Transformation Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="hub-header">
+        <h1>C & T GROUP: DIGITAL TRANSFORMATION</h1>
+        <p>Financial Expertise. Educational Excellence. Technical Innovation.</p>
+    </header>
+
+    <!-- Main Hub Container -->
+    <div class="hub-container">
+        
+        <!-- TOP ROW: Project Documentation -->
+        <section class="hub-section">
+            <h2 class="hub-section-title">Project Documentation</h2>
+            <div class="card-grid">
+                
+                <!-- Card 1: The Blueprint (Proposal) -->
+                <a href="proposal.html" class="card">
+                    <div class="card-content">
+                        <h3>The Blueprint</h3>
+                        <p>Comprehensive investment proposal detailing the MWK 450,000 digital transformation project, timeline, and deliverables for C & T Group of Partners.</p>
+                        <span class="card-label">View Proposal</span>
+                    </div>
+                </a>
+
+                <!-- Card 2: The Compact (SLA) -->
+                <a href="sla.html" class="card">
+                    <div class="card-content">
+                        <h3>The Compact</h3>
+                        <p>Interactive Service Level Agreement outlining responsibilities, payment terms, intellectual property rights, and legal framework for the partnership.</p>
+                        <span class="card-label">View SLA</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- BOTTOM ROW: The 3 Interactive Demos -->
+        <section class="hub-section">
+            <h2 class="hub-section-title">Visual Identity Demos — Choose Your Aesthetic</h2>
+            <div class="demo-grid">
+                
+                <!-- Tile 1: The Minimalist -->
+                <div class="demo-tile hover-scale" onclick="navigateToDemo('minimalist')">
+                    <div class="style-minimalist">
+                        <h3>The Minimalist</h3>
+                        <p>Clean, high-contrast design inspired by "Old Money" finance aesthetics. Ultra-sharp typography, massive white space, and refined silver borders create an atmosphere of established credibility and timeless professionalism.</p>
+                        <p style="margin-top: 1.5rem; font-weight: 600; color: #1B365D;">Click to Experience →</p>
+                    </div>
+                </div>
+
+                <!-- Tile 2: The Glassmorphic -->
+                <div class="demo-tile hover-scale" onclick="navigateToDemo('glass')">
+                    <div class="style-glass">
+                        <h3>The Glassmorphic</h3>
+                        <p>Futuristic, tech-forward interface featuring frosted glass effects and glowing cyan accents. Perfect for showcasing C & T's modern audit capabilities and QuickBooks expertise with a cutting-edge digital presence.</p>
+                        <p style="margin-top: 1.5rem; font-weight: 600;">Click to Experience →</p>
+                    </div>
+                </div>
+
+                <!-- Tile 3: The Neumorphic -->
+                <div class="demo-tile hover-scale" onclick="navigateToDemo('neumorphic')">
+                    <div class="style-neumorphic">
+                        <h3>The Neumorphic</h3>
+                        <p>Tactile, app-style dashboard with soft shadows and extruded plastic effects. Creates an approachable, interactive experience ideal for educational services and student engagement platforms.</p>
+                        <p style="margin-top: 1.5rem; font-weight: 600; color: #1B365D;">Click to Experience →</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JavaScript for Demo Navigation -->
+    <script>
+        // Demo Links Configuration
+        const links = {
+            minimalist: "https://your-minimalist-demo-link.com",
+            glass: "https://your-glassmorphic-demo-link.com",
+            neumorphic: "https://your-neumorphic-demo-link.com"
+        };
+
+        // Navigate to selected demo
+        function navigateToDemo(demoType) {
+            const url = links[demoType];
+            if (url) {
+                window.location.href = url;
+            } else {
+                console.error('Demo link not configured for:', demoType);
+                alert('Demo link will be configured soon. Please check back!');
+            }
+        }
+
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

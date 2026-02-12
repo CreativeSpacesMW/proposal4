@@ -1,0 +1,533 @@
+/* ===================================
+   C & T GROUP OF PARTNERS
+   The Financial Architect Visual Identity
+   =================================== */
+
+:root {
+  /* Primary Palette */
+  --navy: #1B365D;
+  --blue: #2B88D9;
+  --orange: #FF6B35;
+  --charcoal: #333333;
+  --silver: #E5E7EB;
+  
+  /* Supporting Colors */
+  --white: #FFFFFF;
+  --light-gray: #F9FAFB;
+  --dark-navy: #0F1F3A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--charcoal);
+  line-height: 1.6;
+  background: var(--navy);
+}
+
+/* ===================================
+   TYPOGRAPHY
+   =================================== */
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* ===================================
+   STYLE 1: MINIMALIST
+   "Old Money" Finance Aesthetic
+   =================================== */
+
+.style-minimalist {
+  background: var(--white);
+  border: 1px solid var(--silver);
+  padding: 3rem;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.style-minimalist h3 {
+  font-family: 'Georgia', serif;
+  font-weight: 400;
+  color: var(--navy);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.style-minimalist p {
+  color: var(--charcoal);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.style-minimalist:hover {
+  border-color: var(--navy);
+  box-shadow: 0 8px 24px rgba(27, 54, 93, 0.12);
+}
+
+/* ===================================
+   STYLE 2: GLASSMORPHIC
+   Modern Audit Tech-Forward Aesthetic
+   =================================== */
+
+.style-glass {
+  background: rgba(43, 136, 217, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.style-glass h3 {
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.style-glass p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+.style-glass:hover {
+  background: rgba(43, 136, 217, 0.15);
+  border-color: rgba(0, 255, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(43, 136, 217, 0.3),
+              0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* ===================================
+   STYLE 3: NEUMORPHIC
+   App-Style Dashboard Aesthetic
+   =================================== */
+
+.style-neumorphic {
+  background: var(--silver);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 
+    12px 12px 24px rgba(0, 0, 0, 0.15),
+    -12px -12px 24px rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.style-neumorphic h3 {
+  color: var(--navy);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.style-neumorphic p {
+  color: var(--charcoal);
+  font-size: 0.95rem;
+}
+
+.style-neumorphic:hover {
+  box-shadow: 
+    8px 8px 16px rgba(0, 0, 0, 0.2),
+    -8px -8px 16px rgba(255, 255, 255, 0.9),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* ===================================
+   HUB LAYOUT (index.html)
+   =================================== */
+
+.hub-header {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hub-header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.hub-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.hub-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.hub-section {
+  margin-bottom: 3rem;
+}
+
+.hub-section-title {
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.card, .demo-tile {
+  text-decoration: none;
+  display: block;
+}
+
+.card-content {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--orange);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.2);
+}
+
+.card-content h3 {
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.card-content p {
+  color: var(--charcoal);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.card-label {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--white);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===================================
+   DOCUMENT PAGES (proposal.html, sla.html)
+   =================================== */
+
+.doc-page {
+  min-height: 100vh;
+  background: var(--navy);
+  padding: 2rem;
+}
+
+.doc-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 4rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.doc-header {
+  border-bottom: 3px solid var(--orange);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.doc-header h1 {
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.doc-meta {
+  color: var(--charcoal);
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.doc-section {
+  margin-bottom: 2.5rem;
+}
+
+.doc-section h2 {
+  color: var(--navy);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.doc-section h3 {
+  color: var(--blue);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.doc-section p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.doc-section ul {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.doc-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.price-table th {
+  background: var(--navy);
+  color: var(--white);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.price-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--silver);
+}
+
+.price-table tr:last-child td {
+  border-bottom: none;
+}
+
+.highlight-box {
+  background: var(--light-gray);
+  border-left: 4px solid var(--orange);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.timeline {
+  margin: 1.5rem 0;
+}
+
+.timeline-item {
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  background: var(--orange);
+  border-radius: 50%;
+}
+
+.back-button {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--white);
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: var(--blue);
+  transform: translateX(-4px);
+}
+
+/* ===================================
+   SLA SPECIFIC STYLES
+   =================================== */
+
+.editable-content {
+  min-height: 200px;
+  padding: 1rem;
+  border: 2px dashed var(--silver);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.editable-content:focus {
+  outline: none;
+  border-color: var(--blue);
+  background: var(--light-gray);
+}
+
+.sla-actions {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--silver);
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background: #e55a28;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.signature-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--silver);
+}
+
+.signature-field {
+  border-bottom: 2px solid var(--charcoal);
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+}
+
+/* ===================================
+   PRINT STYLES FOR PDF EXPORT
+   =================================== */
+
+@media print {
+  body {
+    background: white;
+  }
+  
+  .doc-page {
+    background: white;
+  }
+  
+  .back-button,
+  .sla-actions,
+  .btn-primary {
+    display: none;
+  }
+  
+  .doc-container {
+    box-shadow: none;
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  .editable-content {
+    border: none;
+  }
+  
+  * {
+    color: black !important;
+    background: white !important;
+  }
+  
+  .doc-header {
+    border-bottom-color: black;
+  }
+  
+  .price-table th {
+    background: #f0f0f0 !important;
+    color: black !important;
+    border: 1px solid black;
+  }
+  
+  .price-table td {
+    border: 1px solid black;
+  }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 768px) {
+  .hub-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .card-grid,
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .doc-container {
+    padding: 2rem;
+  }
+  
+  .signature-block {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+}
